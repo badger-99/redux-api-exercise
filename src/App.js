@@ -8,7 +8,7 @@ function App() {
       <section className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
       <h1>Redux api exercise.</h1>
-      {/* <Users /> */}
+      <Users />
       </section>
     </div>
   );
