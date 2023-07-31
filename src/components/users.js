@@ -1,15 +1,23 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
 const Users = () => {
   const { users, isLoading, error } = useSelector((store) => store.users);
 
   if (isLoading) {
-    return <div><h3>Loading...</h3></div>
+    return (
+      <div>
+        <h3>Loading...</h3>
+      </div>
+    );
   }
 
   if (error) {
-    return <div><h3>Error!</h3></div>
+    return (
+      <div>
+        <h3>Error!</h3>
+      </div>
+    );
   }
 
   return (
@@ -20,5 +28,7 @@ const Users = () => {
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
+
+export default Users;
