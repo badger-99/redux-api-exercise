@@ -15,7 +15,7 @@ const Users = () => {
   if (error) {
     return (
       <div>
-        <h3>Error!</h3>
+        <h3>{ error }</h3>
       </div>
     );
   }
@@ -24,7 +24,7 @@ const Users = () => {
     <div>
       <ul>
         {users.map((user) => {
-          return <li key={uuidv4()}>{`${user}`}</li>;
+          return <li key={uuidv4()}>{`${user.name.first} ${user.name.last}`}</li>;
         })}
       </ul>
     </div>
